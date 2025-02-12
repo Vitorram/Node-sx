@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Vitorram/Node-sx/issues"
   },
-  "homepage": "https://github.com/Vitorram/Node-sx#readme"
+  "homepage": "https://github.com/Vitorram/Node-sx#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
