@@ -1,0 +1,25 @@
+{
+  "name": "teste-node",
+  "version": "1.0.0",
+  "description": "Teste feito em aula",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitorram/Node-sx.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express",
+    "mvc"
+  ],
+  "author": "Vitor Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitorram/Node-sx/issues"
+  },
+  "homepage": "https://github.com/Vitorram/Node-sx#readme"
+}
