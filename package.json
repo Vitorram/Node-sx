@@ -2,12 +2,11 @@
   "name": "teste-node",
   "version": "1.0.0",
   "description": "Teste feito em aula",
-  "main": "test.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js"
-
   },
   "repository": {
     "type": "git",
