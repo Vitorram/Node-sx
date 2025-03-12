@@ -1,9 +1,10 @@
 export default function criarUser(req, res) {
-    res.json({
-      
+  const {id} = req.params  
+  res.json({
       name: "vitors",
       email: "vitor@gmail.com",
       avatar: "http://github.com/Vitorram.png"
+      
     })
 
 

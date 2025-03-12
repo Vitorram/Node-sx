@@ -1,8 +1,13 @@
 export default function buscarUsuario(req, res) {
-    res.json({
+    
+  const {id} = req.params
+
+  res.json({
+      id: parseInt(id),
       name: "vitors",
       email: "vitor@gmail.com",
-      avatar: "http://github.com/Vitorram.png"
+      avatar: "http://github.com/Vitorram.png",
+      message: "Ola {id}"
     })
 
 
