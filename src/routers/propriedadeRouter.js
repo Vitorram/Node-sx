@@ -1,49 +1,16 @@
 import express from 'express'
-
 const router= express.Router()
+import buscarPropriedade from '../controllers/propriedade/buscarPopriedade.js'
+import criarPropriedade from '../controllers/propriedade/criarPropriedade.js'
+import atualizarPropriedade from '../controllers/propriedade/atualizarPropriedade.js'
+import deletarPropriedade from '../controllers/propriedade/deletarPropriedade.js'
+import parcialPropriedade from '../controllers/propriedade/parcialPropriedade.js'
 
-router.get('/', (req, res) => {
-    res.json({
-      titulo: "Casa vermelha",
-      valor: "R$10.000",
-      fotos: "http://github.com/Vitorram.png"
-    })
-
-
-})
-
-router.post('/', (req, res) => {
-  res.json({
-    message: "Imovel criado com sucesso",
-    titulo: "Casa branca",
-    valor: "R$10.000",
-    fotos: "http://github.com/Vitorram.png"
-   
-  })
-})
-router.put('/', (req, res) => {
-  res.json({
-    message: "Imovel atualizado",
-    titulo: "Casa branca",
-    valor: "R$15.000",
-    fotos: "http://github.com/Vitorram.png"
-   
-  })
-})
-router.delete('/', (req, res) => {
-  res.json({
-    message: "Imovel deletado com sucesso",
-  })
-})
-router.patch('/', (req, res) => {
-  res.json({
-    message: "Imovel atualizado",
-    titulo: "Casa branca",
-    valor: "R$9.000",
-    fotos: "http://github.com/Vitorram.png"
-   
-  })
-})
+router.get('/', buscarPropriedade)
+router.post('/', criarPropriedade)
+router.put('/', atualizarPropriedade)
+router.delete('/', deletarPropriedade)
+router.patch('/', parcialPropriedade)
 
 
 export default router

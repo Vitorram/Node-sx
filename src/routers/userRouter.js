@@ -1,27 +1,18 @@
 import express from 'express'
 
 const router= express.Router()
-
-router.get('/', (req, res) => {
-    res.json({
-      name: "vitors",
-      email: "vitor@gmail.com",
-      avatar: "http://github.com/Vitorram.png"
-    })
+import criarUser from '../controllers/user/criarUsuario.js'
+import buscarUsuario from '../controllers/user/buscarUsuario.js'
+import atualizarUsuario from '../controllers/user/atualizarUsuario.js'
+import deletarUsuario from '../controllers/user/deletarUsuario.js'
+import parcialUsuario from '../controllers/user/parcialUsuario.js'
 
 
-})
-
-router.post('/', (req, res) => {
-  res.json({
-    message: "usuario criado com sucesso",
-    user:{
-    name: "vit",
-    email: "vitor@gmail.com",
-    avatar: "http://github.com/Vitorram.png"},
-   
-  })
-})
+router.get('/', buscarUsuario)
+router.post('/', criarUser)
+router.put('/', atualizarUsuario)
+router.delete('/', deletarUsuario)
+router.patch('/', parcialUsuario)
 
 
 export default router
